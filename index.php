@@ -14,7 +14,7 @@ if (!isset($_SESSION["authenticated"])) {
   
     <h1>Assignment 1</h1>
   
-    <p>Welcome, <?=$_SESSION["username"] ?></p>
+    <p>Welcome, <?=$_SESSION["username"] . " [" . date("F jS\, Y") . "]."?></p>
     
   </body>
   <footer>
