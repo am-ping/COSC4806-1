@@ -9,6 +9,7 @@ if (!isset($_SESSION["authenticated"])) {
 <html>
   <head>
     <title>Arbaaz</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
   

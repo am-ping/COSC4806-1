@@ -7,9 +7,10 @@ if (isset($_SESSION["authenticated"])) {
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-<title>Login</title>
-</head>
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
 <body>
 
   <h1>Login Form</h1>
@@ -25,6 +26,13 @@ if (isset($_SESSION["authenticated"])) {
     <br>
     <input type="submit" value="Submit">
   </form>
+  <p>
+    <?php 
+    if (isset($_SESSION["failed_attempts"])) {
+      echo "This is unsuccessful attempt number " . $_SESSION["failed_attempts"];
+    }
+    ?>
+  </p>
 
 </body>
 </html>
