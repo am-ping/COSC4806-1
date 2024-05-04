@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+if ($_SESSION["authenticated"] == 1) {
+  header ("location: /index.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>

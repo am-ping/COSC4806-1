@@ -1,8 +1,9 @@
 <?php
 session_start();
 
-// Check if user is authenticated
-// if NOT< send them to login.php... header()...
+if ($_SESSION["authenticated"] != 1) {
+  header ("location: /login.php");
+}
 ?>
 <!DOCTYPE html>
 <html>
