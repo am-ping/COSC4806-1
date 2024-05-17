@@ -1,9 +1,22 @@
 <?php
+/*
+require_once('user.php');
+$user = new User();
+$users = $user->get_all_users();
+
+echo "<pre>";
+
+print_r($users);
+*/
+
 session_start();
 
 if (!isset($_SESSION["authenticated"])) {
   header ("location: /login.php");
 }
+
+
+  
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +26,7 @@ if (!isset($_SESSION["authenticated"])) {
   </head>
   <body>
   
-    <h1>Assignment 1</h1>
+    <h1>Assignment 2</h1>
   
     <p>Welcome, <?=$_SESSION["username"] . " [" . date("F jS\, Y") . "]."?></p>
     

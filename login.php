@@ -27,7 +27,7 @@ if (isset($_SESSION["authenticated"])) {
       <br>
       <input type="submit" value="Submit" id="submit">
     </form>
-    
+    <p>Don't have an account? <a href='/signup.php'>Sign up</a></p>
   </div>
   <?php
   if (isset($_SESSION["failed_attempts"])) {
