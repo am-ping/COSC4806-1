@@ -1,5 +1,5 @@
 <?php
-/*
+
 require_once('database.php');
 
 Class User {
@@ -14,12 +14,26 @@ Class User {
   
   public function create_user($username, $password) {
     $db = db_connect();
-    $statement = $db->prepare("INSERT INTO users VALUES ($username, $password);");
+    $statement = $db->prepare("INSERT INTO users (username, password) VALUES ('$username', '$password');");
+    $statement->execute(); 
+  }
+
+  public function find_user($username) {
+    $db = db_connect();
+    $statement = $db->prepare("SELECT username FROM users WHERE username = '$username';");
     $statement->execute();
-    $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
-    return $rows;
+    $user = $statement->fetchAll(PDO::FETCH_ASSOC);
+    return $user;
+  }
+
+  public function validate($username, $password) {
+    $db = db_connect();
+    $statement = $db->prepare("SELECT * FROM users WHERE username = '$username' AND password = '$password';");
+    $statement->execute();
+    $user = $statement->fetchAll(PDO::FETCH_ASSOC);
+    return $user;
   }
   
 }
-*/
+
 ?>

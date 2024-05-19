@@ -1,22 +1,19 @@
 <?php
-/*
-require_once('user.php');
-$user = new User();
-$users = $user->get_all_users();
-
-echo "<pre>";
-
-print_r($users);
-*/
 
 session_start();
 
 if (!isset($_SESSION["authenticated"])) {
   header ("location: /login.php");
 }
+/*
+require_once('user.php');
+$user = new User();
+$username = $user->find_user("mike");
 
+echo "<pre>";
 
-  
+print_r($username);
+*/
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,7 +25,7 @@ if (!isset($_SESSION["authenticated"])) {
   
     <h1>Assignment 2</h1>
   
-    <p>Welcome, <?=$_SESSION["username"] . " [" . date("F jS\, Y") . "]."?></p>
+    <p>Welcome, <?= $_SESSION["username"] . " [" . date("F jS\, Y") . "]."?></p>
     
   </body>
   <footer>
