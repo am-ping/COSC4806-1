@@ -18,7 +18,7 @@ print_r($username);
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Arbaaz</title>
+    <title>Index</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>

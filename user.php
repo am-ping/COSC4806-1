@@ -26,9 +26,9 @@ Class User {
     return $user;
   }
 
-  public function validate($username, $password) {
+  public function validate($username) {
     $db = db_connect();
-    $statement = $db->prepare("SELECT * FROM users WHERE username = '$username' AND password = '$password';");
+    $statement = $db->prepare("SELECT * FROM users WHERE username = '$username';");
     $statement->execute();
     $user = $statement->fetchAll(PDO::FETCH_ASSOC);
     return $user;

@@ -36,7 +36,7 @@ if (isset($_SESSION["authenticated"])) {
     
     <?php
     if (isset($_SESSION["acct_created"])) {
-      echo '<p class="attempts">' . $_SESSION["acct_created"] . '</p>';
+      echo '<p class="attempts success">' . $_SESSION["acct_created"] . '</p>';
       unset($_SESSION["acct_created"]);
     } else if (isset($_SESSION["empty_field"])) {
       echo '<p class="attempts">' . $_SESSION["empty_field"] . '</p>';
