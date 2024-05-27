@@ -47,6 +47,9 @@ if (isset($_SESSION["authenticated"])) {
     } else if (isset($_SESSION["pwds_unmatch"])) {
       echo '<p class="attempts">' . $_SESSION["pwds_unmatch"] . '</p>';
       unset($_SESSION["pwds_unmatch"]);
+    } else if (isset($_SESSION["pwd_strength"])) {
+      echo '<p class="attempts">' . $_SESSION["pwd_strength"] . '</p>';
+      unset($_SESSION["pwd_strength"]);
     }
     ?>
 
