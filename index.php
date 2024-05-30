@@ -1,19 +1,9 @@
 <?php
-
 session_start();
 
 if (!isset($_SESSION["authenticated"])) {
   header ("location: /login.php");
 }
-/*
-require_once('user.php');
-$user = new User();
-$username = $user->find_user("mike");
-
-echo "<pre>";
-
-print_r($username);
-*/
 ?>
 <!DOCTYPE html>
 <html>
